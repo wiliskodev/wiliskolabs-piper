@@ -282,8 +282,8 @@
   function updateCounter() {
     const len = document.getElementById('scriptText').value.length;
     const el = document.getElementById('charCount');
-    el.textContent = `${len.toLocaleString('fr')} / 5 000`;
-    el.className = 'char-count'+(len>4500?' warn':'');
+    el.textContent = `${len.toLocaleString('fr')} / 15 000`;
+    el.className = 'char-count'+(len>13000?' warn':'');
   }
 
   function updateSpeed() {
@@ -377,6 +377,7 @@
   async function generateVoice() {
     const text = document.getElementById('scriptText').value.trim();
     if (!text) { toast('⚠️ Écrivez un script d\'abord','error'); return; }
+    if (text.length > 15000) { toast('⚠️ Texte trop long (max 15 000 car.)','error'); return; }
     if (!selectedVoiceId) { toast('⚠️ Sélectionnez une voix','error'); return; }
 
     const btn = document.getElementById('generateBtn');
