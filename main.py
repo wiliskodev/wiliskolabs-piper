@@ -83,8 +83,8 @@ class TTSRequest(BaseModel):
 async def synthesize(req: TTSRequest):
     if not req.text.strip():
         raise HTTPException(status_code=400, detail="Le texte est vide")
-    if len(req.text) > 5000:
-        raise HTTPException(status_code=400, detail="Texte trop long (max 5000 caractères)")
+    if len(req.text) > 15000:
+        raise HTTPException(status_code=400, detail="Texte trop long (max 15000 caractères)")
 
     # Vérifier que la voix existe
     model_path = os.path.join(MODELS_DIR, f"{req.voice_id}.onnx")
