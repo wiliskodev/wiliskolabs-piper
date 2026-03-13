@@ -20,10 +20,10 @@ RUN wget -q -O /app/models/fr_FR-siwis-medium.onnx \
  && wget -q -O /app/models/fr_FR-siwis-medium.onnx.json \
     "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx.json"
 
-RUN wget -q -O /app/models/fr_FR-upmc-pierre-medium.onnx \
-    "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/upmc-pierre/medium/fr_FR-upmc-pierre-medium.onnx" \
- && wget -q -O /app/models/fr_FR-upmc-pierre-medium.onnx.json \
-    "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/upmc-pierre/medium/fr_FR-upmc-pierre-medium.onnx.json"
+RUN wget -q -O /app/models/fr_FR-tom-medium.onnx \
+    "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx" \
+ && wget -q -O /app/models/fr_FR-tom-medium.onnx.json \
+    "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx.json"
 
 RUN wget -q -O /app/models/fr_FR-mls-medium.onnx \
     "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/mls/medium/fr_FR-mls-medium.onnx" \
