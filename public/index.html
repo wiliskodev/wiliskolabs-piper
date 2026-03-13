@@ -19,7 +19,6 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-size:14px;min-height:100vh;line-height:1.6;}
-
     .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:var(--shadow);}
     .logo{display:flex;align-items:center;gap:10px;}
     .logo-icon{width:34px;height:34px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;}
@@ -31,14 +30,12 @@
     .status-dot.loading{background:var(--amber);animation:pulse 1s infinite;}
     .status-dot.error{background:var(--red);}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-
     .page{max-width:1100px;margin:0 auto;padding:32px 24px 80px;}
     .page-header{margin-bottom:28px;}
     .page-title{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-0.4px;}
     .page-subtitle{font-size:13px;color:var(--text-2);margin-top:4px;}
     .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;}
     @media(max-width:768px){.grid{grid-template-columns:1fr}.topbar{padding:0 16px}.page{padding:20px 16px 60px}}
-
     .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);animation:fadeUp 0.4s ease both;}
     .card:nth-child(2){animation-delay:0.06s}.card:nth-child(3){animation-delay:0.12s}
     @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -46,26 +43,19 @@
     .card-title{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px;}
     .card-icon{width:22px;height:22px;background:var(--blue-light);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;}
     .card-body{padding:20px;}
-
     .script-area{width:100%;min-height:220px;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:'Outfit',sans-serif;font-size:14px;line-height:1.7;padding:14px 16px;resize:vertical;outline:none;transition:border-color 0.15s;}
     .script-area:focus{border-color:var(--blue);background:var(--surface);}
     .script-area::placeholder{color:var(--text-3);}
     .script-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
     .char-count{font-size:12px;color:var(--text-3);font-family:'JetBrains Mono',monospace;}
     .char-count.warn{color:var(--amber);}
-
-    select{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;padding:9px 32px 9px 12px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;transition:border-color 0.15s;}
-    select:focus{border-color:var(--blue);}
-
     .voice-search{width:100%;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:'Outfit',sans-serif;font-size:13px;padding:8px 12px 8px 34px;outline:none;transition:border-color 0.15s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center;}
     .voice-search:focus{border-color:var(--blue);}
-
     .filter-tabs{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap;}
     .filter-tab{padding:4px 12px;border-radius:20px;border:1.5px solid var(--border);background:var(--surface2);color:var(--text-2);font-size:11px;font-weight:600;cursor:pointer;transition:all 0.12s;}
     .filter-tab:hover{border-color:var(--blue-mid);color:var(--blue);}
     .filter-tab.active{background:var(--blue-light);border-color:var(--blue-mid);color:var(--blue);}
-
-    .voices-list{display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto;margin-top:10px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+    .voices-list{display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto;margin-top:10px;scrollbar-width:thin;}
     .voice-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:1.5px solid transparent;cursor:pointer;transition:all 0.12s;}
     .voice-item:hover{background:var(--surface2);border-color:var(--border);}
     .voice-item.selected{background:var(--blue-light);border-color:var(--blue-mid);}
@@ -79,7 +69,6 @@
     .preview-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
     .voice-empty{text-align:center;padding:28px 16px;color:var(--text-3);font-size:13px;}
     .voice-empty span{display:block;font-size:24px;margin-bottom:8px;}
-
     .slider-item{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
     .slider-item:last-of-type{margin-bottom:0;}
     .slider-label-row{display:flex;justify-content:space-between;align-items:center;}
@@ -89,30 +78,40 @@
     input[type="range"]::-webkit-slider-thumb{appearance:none;width:16px;height:16px;border-radius:50%;background:var(--blue);border:2px solid white;box-shadow:0 1px 4px rgba(37,99,235,0.4);cursor:pointer;}
     .reset-btn{font-size:11px;color:var(--text-3);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;padding:0;}
     .reset-btn:hover{color:var(--blue);}
-
     .generate-btn{width:100%;margin-top:20px;padding:14px 20px;background:var(--blue);border:none;border-radius:var(--radius);color:white;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;}
     .generate-btn:hover:not(:disabled){background:var(--blue-hover);box-shadow:0 4px 14px rgba(37,99,235,0.35);transform:translateY(-1px);}
-    .generate-btn:active{transform:translateY(0);}
-    .generate-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none!important;}
+    .generate-btn:disabled{opacity:0.6;cursor:not-allowed;}
+    /* PROGRESSION */
+    .progress-card{margin-top:16px;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:20px;display:none;}
+    .progress-card.show{display:block;animation:fadeUp 0.3s ease;}
+    .progress-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+    .progress-title{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px;}
+    .progress-count{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--blue);font-weight:700;}
+    .progress-bar-wrap{background:var(--surface2);border-radius:20px;height:8px;overflow:hidden;margin-bottom:12px;}
+    .progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),#60A5FA);border-radius:20px;transition:width 0.4s ease;width:0%;}
+    .progress-sentence{font-size:12px;color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-style:italic;margin-bottom:10px;}
+    .progress-steps{display:flex;gap:4px;flex-wrap:wrap;}
+    .step-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:background 0.25s;}
+    .step-dot.done{background:var(--blue);}
+    .step-dot.active{background:var(--amber);animation:pulse 0.7s infinite;}
     .wave{display:flex;align-items:center;gap:3px;height:18px;}
-    .wave-bar{width:3px;background:white;border-radius:3px;animation:wv 0.8s ease-in-out infinite;}
+    .wave-bar{width:3px;background:var(--blue);border-radius:3px;animation:wv 0.8s ease-in-out infinite;}
     .wave-bar:nth-child(1){animation-delay:0s}.wave-bar:nth-child(2){animation-delay:0.1s}.wave-bar:nth-child(3){animation-delay:0.2s}.wave-bar:nth-child(4){animation-delay:0.3s}.wave-bar:nth-child(5){animation-delay:0.2s}.wave-bar:nth-child(6){animation-delay:0.1s}
     @keyframes wv{0%,100%{height:4px}50%{height:16px}}
-
+    .wave-white .wave-bar{background:white;}
     .player-card{margin-top:16px;background:var(--blue-light);border:1.5px solid var(--blue-mid);border-radius:var(--radius-lg);padding:16px 20px;display:none;}
     .player-card.show{display:block;animation:fadeUp 0.3s ease;}
     .player-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
     .player-label{font-size:12px;font-weight:600;color:var(--green);display:flex;align-items:center;gap:6px;}
     .player-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;}
     .dl-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:white;border:1.5px solid var(--blue-mid);border-radius:20px;color:var(--blue);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.15s;}
-    .dl-btn:hover{background:var(--blue);color:white;border-color:var(--blue);}
+    .dl-btn:hover{background:var(--blue);color:white;}
     audio{width:100%;height:36px;outline:none;border-radius:6px;}
-
     .section{margin-top:28px;}
     .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
     .section-title{font-size:14px;font-weight:700;color:var(--text);}
     .section-badge{font-size:11px;font-weight:600;color:var(--text-3);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:20px;}
-    .history-item{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:border-color 0.12s;margin-bottom:6px;}
+    .history-item{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px;transition:border-color 0.12s;}
     .history-item:hover{border-color:var(--blue-mid);}
     .history-icon{width:32px;height:32px;border-radius:8px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
     .history-info{flex:1;min-width:0;}
@@ -122,11 +121,8 @@
     .history-play:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
     .empty-state{text-align:center;padding:32px 16px;color:var(--text-3);border:1.5px dashed var(--border);border-radius:var(--radius-lg);}
     .empty-state-icon{font-size:28px;margin-bottom:10px;}
-    .empty-state p{font-size:13px;}
-
     .powered{text-align:center;margin-top:14px;font-size:11px;color:var(--text-3);}
     .offline-badge{display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;border:1px solid #86EFAC;color:#15803D;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;}
-
     .toast{position:fixed;bottom:28px;right:28px;background:var(--text);color:white;padding:12px 18px;border-radius:var(--radius);font-size:13px;font-weight:500;box-shadow:var(--shadow-md);transform:translateY(60px);opacity:0;transition:all 0.25s ease;z-index:200;max-width:300px;}
     .toast.show{transform:translateY(0);opacity:1;}
     .toast.success{background:#065F46;}
@@ -156,14 +152,10 @@
 <div class="page">
   <div class="page-header">
     <div class="page-title">Générateur de voix off</div>
-    <div class="page-subtitle">
-      Voix hyperréalistes Microsoft Neural — 100% offline, zéro limite, zéro clé API
-      &nbsp;<span class="offline-badge">⚡ Offline</span>
-    </div>
+    <div class="page-subtitle">Voix hyperréalistes · Génération progressive · 100% offline &nbsp;<span class="offline-badge">⚡ Offline</span></div>
   </div>
 
   <div class="grid">
-    <!-- GAUCHE -->
     <div>
       <div class="card">
         <div class="card-header">
@@ -171,10 +163,9 @@
         </div>
         <div class="card-body">
           <textarea class="script-area" id="scriptText"
-            placeholder="Écrivez ou collez votre texte ici...&#10;&#10;Exemple : Bienvenue sur WiliskoLabs Studio, votre partenaire de création vocale propulsé par l'intelligence artificielle."
-            oninput="updateCounter()"></textarea>
+            placeholder="Écrivez ou collez votre texte ici..." oninput="updateCounter()"></textarea>
           <div class="script-footer">
-            <div class="char-count" id="charCount">0 / 5 000</div>
+            <div class="char-count" id="charCount">0 / 15 000</div>
             <button onclick="document.getElementById('scriptText').value='';updateCounter()"
               style="background:none;border:none;color:var(--text-3);font-family:'Outfit',sans-serif;font-size:12px;cursor:pointer;"
               onmouseenter="this.style.color='var(--red)'" onmouseleave="this.style.color='var(--text-3)'">Effacer</button>
@@ -187,9 +178,24 @@
         Générer la voix off
       </button>
 
+      <!-- PROGRESSION -->
+      <div class="progress-card" id="progressCard">
+        <div class="progress-header">
+          <div class="progress-title">
+            <div class="wave"><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div></div>
+            Génération en cours...
+          </div>
+          <div class="progress-count" id="progressCount">0 / 0</div>
+        </div>
+        <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressFill"></div></div>
+        <div class="progress-sentence" id="progressSentence">Initialisation...</div>
+        <div class="progress-steps" id="progressSteps"></div>
+      </div>
+
+      <!-- LECTEUR -->
       <div class="player-card" id="playerCard">
         <div class="player-top">
-          <div class="player-label">Voix générée avec succès</div>
+          <div class="player-label">Voix off générée avec succès</div>
           <a class="dl-btn" id="dlLink" download="wiliskolabs-voiceover.wav">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Télécharger WAV
@@ -198,6 +204,7 @@
         <audio controls id="audioPlayer"></audio>
       </div>
 
+      <!-- HISTORIQUE -->
       <div class="section">
         <div class="section-header">
           <div class="section-title">Historique de session</div>
@@ -211,8 +218,6 @@
 
     <!-- DROITE -->
     <div style="display:flex;flex-direction:column;gap:16px;">
-
-      <!-- VOIX -->
       <div class="card">
         <div class="card-header">
           <div class="card-title"><div class="card-icon">🎙️</div>Voix disponibles</div>
@@ -233,7 +238,6 @@
         </div>
       </div>
 
-      <!-- RÉGLAGES -->
       <div class="card">
         <div class="card-header">
           <div class="card-title"><div class="card-icon">🎛️</div>Réglages vocaux</div>
@@ -245,8 +249,7 @@
               <span class="slider-name">Vitesse de parole</span>
               <span class="slider-val" id="speedVal">Normal</span>
             </div>
-            <input type="range" id="speedSlider" min="50" max="200" step="10" value="100"
-              oninput="updateSpeed()">
+            <input type="range" id="speedSlider" min="50" max="200" step="10" value="100" oninput="updateSpeed()">
           </div>
           <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-3);margin-top:4px;">
             <span>Lent</span><span>Normal</span><span>Rapide</span>
@@ -254,9 +257,7 @@
         </div>
       </div>
 
-      <div class="powered">
-        Propulsé par <strong>Piper TTS</strong> · Voix Neural offline
-      </div>
+      <div class="powered">Propulsé par <strong>Piper TTS</strong> · Neural offline</div>
     </div>
   </div>
 </div>
@@ -264,172 +265,165 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  let selectedVoiceId = null, allVoices = [], histCount = 0;
-  let activeFilter = 'all';
+let selectedVoiceId=null,allVoices=[],histCount=0,activeFilter='all';
 
-  function toast(msg, type='') {
-    const t = document.getElementById('toast');
-    t.innerHTML = msg; t.className = `toast show ${type}`;
-    clearTimeout(t._t); t._t = setTimeout(()=>t.className='toast', 3500);
-  }
+function toast(msg,type=''){const t=document.getElementById('toast');t.innerHTML=msg;t.className=`toast show ${type}`;clearTimeout(t._t);t._t=setTimeout(()=>t.className='toast',3500);}
+function setStatus(s){const dot=document.getElementById('statusDot'),txt=document.getElementById('statusText');dot.className='status-dot'+(s==='loading'?' loading':s==='error'?' error':'');txt.textContent=s==='loading'?'Génération...':s==='error'?'Erreur':'Prêt';}
+function updateCounter(){const len=document.getElementById('scriptText').value.length;const el=document.getElementById('charCount');el.textContent=`${len.toLocaleString('fr')} / 15 000`;el.className='char-count'+(len>13000?' warn':'');}
+function updateSpeed(){const val=parseInt(document.getElementById('speedSlider').value);const el=document.getElementById('speedVal');if(val===100)el.textContent='Normal';else if(val<100)el.textContent=`${val}% (lent)`;else el.textContent=`${val}% (rapide)`;}
+function resetSpeed(){document.getElementById('speedSlider').value=100;document.getElementById('speedVal').textContent='Normal';}
 
-  function setStatus(s) {
-    const dot = document.getElementById('statusDot'), txt = document.getElementById('statusText');
-    dot.className = 'status-dot'+(s==='loading'?' loading':s==='error'?' error':'');
-    txt.textContent = s==='loading'?'Génération...':s==='error'?'Erreur':'Prêt';
-  }
+async function loadVoices(){
+  try{const res=await fetch('/api/voices');const data=await res.json();allVoices=data.voices||[];renderVoices(allVoices);setStatus('ready');}
+  catch{document.getElementById('voicesList').innerHTML='<div class="voice-empty"><span>⚠️</span>Erreur de chargement</div>';setStatus('error');}
+}
 
-  function updateCounter() {
-    const len = document.getElementById('scriptText').value.length;
-    const el = document.getElementById('charCount');
-    el.textContent = `${len.toLocaleString('fr')} / 15 000`;
-    el.className = 'char-count'+(len>13000?' warn':'');
-  }
+function setFilter(f,el){activeFilter=f;document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');filterVoices();}
 
-  function updateSpeed() {
-    const val = parseInt(document.getElementById('speedSlider').value);
-    const el = document.getElementById('speedVal');
-    if (val===100) el.textContent='Normal';
-    else if (val<100) el.textContent=`${val}% (lent)`;
-    else el.textContent=`${val}% (rapide)`;
-  }
+function filterVoices(){
+  const q=document.getElementById('voiceSearch').value.toLowerCase();
+  let filtered=allVoices.filter(v=>{
+    const matchQ=v.name.toLowerCase().includes(q)||v.locale.toLowerCase().includes(q);
+    const matchF=activeFilter==='all'||(activeFilter==='fr'&&v.locale.startsWith('fr'))||(activeFilter==='en'&&v.locale.startsWith('en'))||activeFilter===v.gender;
+    return matchQ&&matchF;
+  });
+  document.getElementById('voiceCount').textContent=`${filtered.length} voix`;
+  renderVoices(filtered);
+}
 
-  function resetSpeed() {
-    document.getElementById('speedSlider').value = 100;
-    document.getElementById('speedVal').textContent = 'Normal';
-  }
+function renderVoices(voices){
+  const list=document.getElementById('voicesList');
+  if(!voices.length){list.innerHTML='<div class="voice-empty"><span>🔍</span>Aucune voix trouvée</div>';return;}
+  list.innerHTML=voices.map(v=>{
+    const sel=selectedVoiceId===v.voice_id?' selected':'';
+    const ac=v.gender==='female'?' female':'';
+    return `<div class="voice-item${sel}" onclick="selectVoice('${v.voice_id}',this)">
+      <div class="voice-avatar${ac}">${v.flag}</div>
+      <div class="voice-info"><div class="voice-name">${v.name}</div><div class="voice-desc">${v.description}</div></div>
+      <button class="preview-btn" onclick="previewVoice(event,'${v.voice_id}')">▶</button>
+    </div>`;
+  }).join('');
+  if(!selectedVoiceId&&voices.length){const f=list.querySelector('.voice-item');if(f)selectVoice(voices[0].voice_id,f);}
+}
 
-  async function loadVoices() {
-    try {
-      const res = await fetch('/api/voices');
-      const data = await res.json();
-      if (!data.voices) throw new Error();
-      allVoices = data.voices;
-      renderVoices(allVoices);
-      setStatus('ready');
-    } catch {
-      document.getElementById('voicesList').innerHTML = '<div class="voice-empty"><span>⚠️</span>Erreur de chargement</div>';
-      setStatus('error');
+function selectVoice(id,el){document.querySelectorAll('.voice-item').forEach(i=>i.classList.remove('selected'));el.classList.add('selected');selectedVoiceId=id;}
+
+async function previewVoice(e,id){
+  e.stopPropagation();const btn=e.currentTarget;btn.textContent='…';btn.disabled=true;
+  try{const res=await fetch('/api/tts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({voice_id:id,text:'Bonjour, voici un aperçu de cette voix.',speed:1.0})});
+    if(!res.ok)throw new Error();new Audio(URL.createObjectURL(await res.blob())).play();}
+  catch{toast('Aperçu indisponible','error');}
+  btn.textContent='▶';btn.disabled=false;
+}
+
+async function generateVoice(){
+  const text=document.getElementById('scriptText').value.trim();
+  if(!text){toast('⚠️ Écrivez un script d\'abord','error');return;}
+  if(text.length>15000){toast('⚠️ Texte trop long (max 15 000 car.)','error');return;}
+  if(!selectedVoiceId){toast('⚠️ Sélectionnez une voix','error');return;}
+
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;
+  btn.innerHTML='<div class="wave wave-white"><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div></div> Génération en cours...';
+  setStatus('loading');
+
+  document.getElementById('playerCard').className='player-card';
+  document.getElementById('progressCard').className='progress-card show';
+  document.getElementById('progressFill').style.width='0%';
+  document.getElementById('progressCount').textContent='0 / ?';
+  document.getElementById('progressSentence').textContent='Initialisation...';
+  document.getElementById('progressSteps').innerHTML='';
+
+  const speed=parseInt(document.getElementById('speedSlider').value)/100;
+
+  try{
+    const res=await fetch('/api/tts/stream',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({voice_id:selectedVoiceId,text,speed})});
+    if(!res.ok){const err=await res.json().catch(()=>({}));throw new Error(err.detail||'Erreur serveur');}
+
+    const reader=res.body.getReader();
+    const decoder=new TextDecoder();
+    let buffer='';
+    const stepsEl=document.getElementById('progressSteps');
+    let dots=[];
+
+    while(true){
+      const{done,value}=await reader.read();
+      if(done)break;
+      buffer+=decoder.decode(value,{stream:true});
+      const lines=buffer.split('\n');
+      buffer=lines.pop();
+
+      for(const line of lines){
+        if(!line.startsWith('data: '))continue;
+        const raw=line.slice(6).trim();
+        if(!raw)continue;
+        let msg;try{msg=JSON.parse(raw);}catch{continue;}
+
+        if(msg.type==='progress'){
+          const{current,total,sentence}=msg;
+          const pct=Math.round((current/total)*100);
+          // Créer les dots la première fois
+          if(dots.length===0){for(let i=0;i<total;i++){const d=document.createElement('div');d.className='step-dot';stepsEl.appendChild(d);dots.push(d);}}
+          document.getElementById('progressFill').style.width=pct+'%';
+          document.getElementById('progressCount').textContent=`${current} / ${total}`;
+          document.getElementById('progressSentence').textContent=`"${sentence}"`;
+          dots.forEach((d,i)=>{if(i<current-1)d.className='step-dot done';else if(i===current-1)d.className='step-dot active';else d.className='step-dot';});
+
+        }else if(msg.type==='done'){
+          dots.forEach(d=>d.className='step-dot done');
+          document.getElementById('progressFill').style.width='100%';
+          document.getElementById('progressCount').textContent=`${msg.total} / ${msg.total}`;
+          document.getElementById('progressSentence').textContent='✓ Assemblage terminé !';
+
+          const binary=atob(msg.audio);
+          const bytes=new Uint8Array(binary.length);
+          for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+          const blob=new Blob([bytes],{type:'audio/wav'});
+          const url=URL.createObjectURL(blob);
+
+          setTimeout(()=>{
+            document.getElementById('progressCard').className='player-card';
+            const player=document.getElementById('audioPlayer');
+            player.src=url;
+            document.getElementById('dlLink').href=url;
+            document.getElementById('playerCard').className='player-card show';
+            player.play();
+            addHistory(text,url);
+            setStatus('ready');
+            toast('✓ Voix off générée !','success');
+          },800);
+
+        }else if(msg.type==='error'){
+          throw new Error(msg.message);
+        }
+      }
     }
+  }catch(e){
+    document.getElementById('progressCard').className='progress-card';
+    toast('Erreur : '+e.message,'error');setStatus('error');
+  }finally{
+    btn.disabled=false;
+    btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg> Générer la voix off';
   }
+}
 
-  function setFilter(f, el) {
-    activeFilter = f;
-    document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
-    el.classList.add('active');
-    filterVoices();
-  }
+function addHistory(text,url){
+  histCount++;
+  const el=document.getElementById('historyList');
+  const time=new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  const voice=allVoices.find(v=>v.voice_id===selectedVoiceId)?.name||selectedVoiceId;
+  if(el.querySelector('.empty-state'))el.innerHTML='';
+  const item=document.createElement('div');item.className='history-item';
+  item.innerHTML=`<div class="history-icon">🎙️</div>
+    <div class="history-info"><div class="history-text">${text}</div><div class="history-meta">${time} · ${voice} · ${text.length} car.</div></div>
+    <button class="history-play" onclick="playHistory('${url}')">▶</button>`;
+  el.insertBefore(item,el.firstChild);
+  document.getElementById('histBadge').textContent=`${histCount} génération${histCount>1?'s':''}`;
+}
 
-  function filterVoices() {
-    const q = document.getElementById('voiceSearch').value.toLowerCase();
-    let filtered = allVoices.filter(v => {
-      const matchQ = v.name.toLowerCase().includes(q) || v.locale.toLowerCase().includes(q);
-      const matchFilter =
-        activeFilter === 'all' ||
-        (activeFilter === 'fr' && v.locale.startsWith('fr')) ||
-        (activeFilter === 'en' && v.locale.startsWith('en')) ||
-        activeFilter === v.gender;
-      return matchQ && matchFilter;
-    });
-    document.getElementById('voiceCount').textContent = `${filtered.length} voix`;
-    renderVoices(filtered);
-  }
+function playHistory(url){const p=document.getElementById('audioPlayer');p.src=url;document.getElementById('playerCard').className='player-card show';p.play();}
 
-  function renderVoices(voices) {
-    const list = document.getElementById('voicesList');
-    if (!voices.length) { list.innerHTML='<div class="voice-empty"><span>🔍</span>Aucune voix trouvée</div>'; return; }
-    list.innerHTML = voices.map(v => {
-      const sel = selectedVoiceId===v.voice_id?' selected':'';
-      const avatarClass = v.gender==='female'?' female':'';
-      return `<div class="voice-item${sel}" onclick="selectVoice('${v.voice_id}',this)">
-        <div class="voice-avatar${avatarClass}">${v.flag}</div>
-        <div class="voice-info">
-          <div class="voice-name">${v.name}</div>
-          <div class="voice-desc">${v.description}</div>
-        </div>
-        <button class="preview-btn" onclick="previewVoice(event,'${v.voice_id}')">▶</button>
-      </div>`;
-    }).join('');
-
-    if (!selectedVoiceId && voices.length) {
-      const first = list.querySelector('.voice-item');
-      if (first) selectVoice(voices[0].voice_id, first);
-    }
-  }
-
-  function selectVoice(id, el) {
-    document.querySelectorAll('.voice-item').forEach(i=>i.classList.remove('selected'));
-    el.classList.add('selected'); selectedVoiceId = id;
-  }
-
-  async function previewVoice(e, id) {
-    e.stopPropagation();
-    const btn = e.currentTarget; btn.textContent='…'; btn.disabled=true;
-    try {
-      const res = await fetch('/api/tts',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({voice_id:id,text:'Bonjour, voici un aperçu de cette voix.',speed:1.0})});
-      if (!res.ok) throw new Error();
-      new Audio(URL.createObjectURL(await res.blob())).play();
-    } catch { toast('Aperçu indisponible','error'); }
-    btn.textContent='▶'; btn.disabled=false;
-  }
-
-  async function generateVoice() {
-    const text = document.getElementById('scriptText').value.trim();
-    if (!text) { toast('⚠️ Écrivez un script d\'abord','error'); return; }
-    if (text.length > 15000) { toast('⚠️ Texte trop long (max 15 000 car.)','error'); return; }
-    if (!selectedVoiceId) { toast('⚠️ Sélectionnez une voix','error'); return; }
-
-    const btn = document.getElementById('generateBtn');
-    btn.disabled=true;
-    btn.innerHTML=`<div class="wave">${'<div class="wave-bar"></div>'.repeat(6)}</div> Génération en cours...`;
-    setStatus('loading');
-
-    try {
-      const speed = parseInt(document.getElementById('speedSlider').value) / 100;
-      const res = await fetch('/api/tts',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({voice_id:selectedVoiceId,text,speed})});
-      if (!res.ok) { const e=await res.json().catch(()=>({})); throw new Error(e.detail||'Erreur'); }
-
-      const url = URL.createObjectURL(await res.blob());
-      const player = document.getElementById('audioPlayer');
-      player.src=url;
-      document.getElementById('dlLink').href=url;
-      document.getElementById('playerCard').className='player-card show';
-      player.play();
-      addHistory(text,url);
-      setStatus('ready');
-      toast('✓ Voix off générée !','success');
-    } catch(e) { toast('Erreur : '+e.message,'error'); setStatus('error'); }
-    finally {
-      btn.disabled=false;
-      btn.innerHTML=`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg> Générer la voix off`;
-    }
-  }
-
-  function addHistory(text,url) {
-    histCount++;
-    const el = document.getElementById('historyList');
-    const time = new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-    const voice = allVoices.find(v=>v.voice_id===selectedVoiceId)?.name||selectedVoiceId;
-    if (el.querySelector('.empty-state')) el.innerHTML='';
-    const item=document.createElement('div'); item.className='history-item';
-    item.innerHTML=`<div class="history-icon">🎙️</div>
-      <div class="history-info">
-        <div class="history-text">${text}</div>
-        <div class="history-meta">${time} · ${voice} · ${text.length} car.</div>
-      </div>
-      <button class="history-play" onclick="playHistory('${url}')">▶</button>`;
-    el.insertBefore(item,el.firstChild);
-    document.getElementById('histBadge').textContent=`${histCount} génération${histCount>1?'s':''}`;
-  }
-
-  function playHistory(url) {
-    const p=document.getElementById('audioPlayer'); p.src=url;
-    document.getElementById('playerCard').className='player-card show'; p.play();
-  }
-
-  loadVoices();
+loadVoices();
 </script>
 </body>
 </html>
