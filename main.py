@@ -23,12 +23,12 @@ VOICES = [
         "description": "Femme · Naturelle · Française"
     },
     {
-        "voice_id": "fr_FR-upmc-pierre-medium",
-        "name": "Pierre",
+        "voice_id": "fr_FR-tom-medium",
+        "name": "Tom",
         "gender": "male",
         "locale": "fr-FR",
         "flag": "🇫🇷",
-        "description": "Homme · Claire · Français"
+        "description": "Homme · Naturel · Français"
     },
     {
         "voice_id": "fr_FR-mls-medium",
